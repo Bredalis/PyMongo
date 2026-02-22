@@ -1,4 +1,8 @@
 
-from CRUD import CRUD
+from crud import Crud
 
-CRUD().borrar()
+URI = "YOUR_MONGODB_URL"
+crud = Crud(URI)
+
+crud.delete({"name": "Juan"})
+crud.close_connection()
